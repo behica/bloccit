@@ -13,6 +13,12 @@ group :development do
   gem 'listen'
 end
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+end
+
+gem 'rails-controller-testing'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
