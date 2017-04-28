@@ -31,3 +31,6 @@ gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks'
 gem 'bootstrap-sass'
+
+#used for encrypting User passwords
+gem 'bcrypt'
