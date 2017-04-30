@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  protect_from_forgery
   def new
     @user = User.new
   end
@@ -17,5 +18,15 @@ class UsersController < ApplicationController
       flash.now[:alert] = "There was an error creating your account. Please try again."
       render :new
     end
+  end
+  
+  def confirm
+    @user = User.create(user_params)
+  end
+  
+  private
+  
+  def user_params
+    params.require(:user).permit!
   end
 end
