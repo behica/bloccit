@@ -40,8 +40,10 @@
 <div class="row">
   <div class="col-md-8">
     <% @user.favorites.each do |favorite| %>
-    <div class="pull-left">
-    <%= image_tag current_user.avatar_url(48), class: "gravatar" %>
+    <div>
+      <div class="pull-left">
+      <%= image_tag current_user.avatar_url(64), class: "gravatar" %>
+      </div>
       <%= render 'posts/post', post: favorite.post %>
     </div>
     <% end %>
